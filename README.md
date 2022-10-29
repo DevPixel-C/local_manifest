@@ -5,7 +5,7 @@ dragonshield-LOS-18.1-WIP_kernel
 
 ---
 
-## **WARNING:** We are using The WIP Testing Kernel in this Repo:
+## **WARNING:** We are using The WIP Testing Kernel in this Repo
 
 To initialize your local repository use a command like this:
 
@@ -17,19 +17,17 @@ Then you need to clone the local_manifest:
 
 # **WIP-4.9 Kernel**
 
-```
+```bash
 rm -rf .repo/local_manifests
 git clone https://github.com/DevPixel-C/local_manifests.git -b dragonshield-LOS-18.1-WIP_Kernel .repo/local_manifests
 ```
+
 # **Original-4.9 Kernel**
 
-```
+```bash
 rm -rf .repo/local_manifests
 git clone https://github.com/DevPixel-C/local_manifests.git -b dragonshield-18.1_kernel-4.9 .repo/local_manifests
 ```
-
-
-> 
 
 ````bash
 ~/root-of-your-build-tree/.repo$ ll
@@ -49,24 +47,50 @@ drwxrwxr-x  7 DevPixel-C DevPixel-C  4096 Feb 28 18:02 repo/
 
 Then to sync up:
 
-````bash
+```bash
 repo sync --force-sync
+```
 
+Or
+
+```bash
 repo sync --force-sync --no-clone-bundle -j10
-````
+```
 
 Finally to build:
 
-````bash
+**Build Google's Dragon (Pixel-C)**
+
+```bash
 source build/envsetup.sh
 
 brunch dragon
+```
+
+**Build NVidia's DragonShield (Pixel-C)**
+
+```bash
+source build/envsetup.sh
 
 brunch dragonshield
+```
 
-**Extra:**
-Recovery partition: mka recoveryimage
-Boot image ramdisk: mka bootimage
-Vendor_boot image ramdisk: mka vendorbootimage
-````
+***Extras:***
 
+**Recovery partition:**
+
+```bash
+mka recoveryimage
+```
+
+**Boot image ramdisk:**
+
+```bash
+mka bootimage
+```
+
+**Vendor_boot image ramdisk:**
+
+```bash
+mka vendorbootimage
+```
