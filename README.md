@@ -18,30 +18,18 @@ Then you need to clone the local_manifest:
 # **WIP-4.9 Kernel**
 
 ```
-cd .repo
-git clone https://github.com/DevPixel-C/manifests-followmsi.git -b dragonshield-LOS-18.1-WIP_Kernel TMP
-cd TMP
-mv ./local_manifests ../
-cd ../../
+rm -rf .repo/local_manifests
+git clone https://github.com/DevPixel-C/local_manifests.git -b dragonshield-LOS-18.1-WIP_Kernel .repo/local_manifests
 ```
-
 # **Original-4.9 Kernel**
 
 ```
-cd .repo
-git clone https://github.com/DevPixel-C/manifests-followmsi.git -b dragon-lineage-18.1 TMP
-cd TMP
-mv ./local_manifests ../
-cd ../../
+rm -rf .repo/local_manifests
+git clone https://github.com/DevPixel-C/local_manifests.git -b dragonshield-18.1_kernel-4.9 .repo/local_manifests
 ```
 
-````bash
-git clone https://github.com/DevPixel-C/manifests-followmsi.git
-git checkout origin/dragon-lineage-18.1
-````
 
-Pls copy the "local_manifests" folder into your "./repo" folder inside your build tree.
-Like below ...
+> 
 
 ````bash
 ~/root-of-your-build-tree/.repo$ ll
